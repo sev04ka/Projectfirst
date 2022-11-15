@@ -110,12 +110,13 @@ body {
 }
 
 .section-config {
-    margin-right: 50px;
-    margin-left: 50px;
+    margin: 0 auto;
     background-color:var(--block-color); 
     border-radius: 20px;
     margin-bottom: 40px;
+    width: 1820px;
 }
+
 
 .benefit__container__img {
     display: flex;
@@ -174,9 +175,10 @@ h3 {
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 30px;
-    margin-right: 340px;
-    margin-left: 340px;
     margin-top: 51px;
+    justify-items: center;
+    align-items: center;
+    width: 1180px;
     
 }
 
@@ -191,18 +193,26 @@ h3 {
 }
 
 .benefit {
+    display: flex;
+    flex-direction: column;
     padding-bottom: 90px;
     padding-top: 90px;
+    align-items: center;
+    margin: 0 auto;
+    width: 1820px;
 }
 
 .cooperating {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     font-size: 1.0625rem;
     border-radius: 20px;
     padding-top: 92px;
-    padding-left: 340px;
-    padding-right: 340px; 
     padding-bottom: 100.25px;
     margin-bottom: 0;
+    width: 1820px;
 }
 
 .cooperating__heading {
@@ -215,6 +225,11 @@ h3 {
 .cooperating__heading__text {
     margin-top: 0;
     text-align: center;
+}
+
+.cooperating__text {
+    max-width: 555px;
+    min-height: 403px;
 }
 
 .cooperating__divider {
