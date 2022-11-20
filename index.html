@@ -7,13 +7,12 @@
     <title>MASTERTAO</title>
     <link href="/css/style.css" rel="stylesheet">
     <link href="/css/normalize.css" rel="stylesheet">
-    <link href="/css/slider.css" rel="stylesheet">
 </head>
 <body>
     <header class="header">
         <div class="header__row">
             <a class="header__logo logo" href="/">
-                <img src="/assets/logo.svg">                   
+                <img src="/assets/svgs/logo.svg">                   
             </a>
                 <nav class="header__row__nav">
                     <ul class="nav__menu menu list-reset">
@@ -256,7 +255,57 @@
                     </article>
                 </div>
         </section>
-        <section class="about section-config">
+        <section class="service section-config">
+            <div class="service__heading">
+                <h2>УСЛУГИ</h2> 
+                <div class="service__heading__divider"></div>
+            </div>
+            <div class="service__content">
+                <label class="serv-label-left" for="serv-slide"><span class="caret"></span></label>
+                    <div class="service__slider">
+                        <input class="service__slider__controller" type="checkbox" id="serv-slide">
+                        <div class="service__slider__content">
+                            <div class="service__card1 card-conf">
+                                <h5>Выкуп товара</h5>
+                                <p>Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. </p>
+                                <button class="service__btn" type="button">Подробнее</button>
+                            </div>
+                            <div class="service__card2 card-conf">
+                                <h5>Страховка груза</h5>
+                                <p>Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. </p>
+                                <button class="service__btn" type="button">Подробнее</button>
+                            </div>
+                            <div class="service__card3 card-conf">
+                                <h5>Аренда склада</h5>
+                                <p>Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. </p>
+                                <button class="service__btn" type="button">Подробнее</button>
+                            </div>
+                            <div class="service__card4 card-conf">
+                                <h5>Перевод денежных средств</h5>
+                                <p>Компания - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. </p>
+                                <button class="service__btn" type="button">Подробнее</button>
+                            </div>
+                        </div>
+                    </div>
+                <label class="serv-label-right" for="serv-slide"><span class="caret"></span></label>
+            </div>
+        </section>
+        <section class="about">
+            <div class="about__content">
+                <div class="about__heading">
+                    <h2>О КОМПАНИИ</h2>
+                    <div class="about__divider"></div>
+                </div>
+                <div class="about__text">
+                    <p>Компания Азия Карго - это полный комплекс логистических услуг по доставке грузов из Китая в Россию - сборные грузы и цельные товарные партии, услуги посредника ТаоБао, КАРГО Китай-Россия. Для вашего удобства есть тарифы на лёгкий и тяжелый куб. Мы работаем на рынке более 4 лет, а руководители компании занимаются логистикой уже более 11 лет.</p>
+                    <p>Мы стремимся предоставить лучшие условия доставки и лучший сервис своим клиентам. Выбирая нас - вы выбираете качественную доставку оптимальную по цене и времени! Убедитесь в этом сами!</p>
+                </div>
+            </div>
+            <div class="about__img">
+                <div class="about__img-bg"></div>
+                <div class="clip"><img src="/assets/images/clipdoard.png"></div>
+                <div class="pen"><img src="/assets/images/pen.png"></div>
+            </div>
         </section>
         <section class="faq">
             <div class="faq__heading"><h2>ЧАСТО ЗАДАВАЕМЫE ВОПРОСЫ</h2>
@@ -374,36 +423,18 @@
                     <div class="cooperating__divider"></div>
                 </div>
                 <div class="cooperating__content">
-                    <div class="cooperating__text">
-                        <ul class="list-reset">
-                            <li>	
-                                &#9679;Для того, чтобы начать сотрудничество, необходимо оформить груз указав информацию о содержимом груза, его стоимость и количество. А так-же прикрепив фотографии к заявке.</li>
-                            <li><br></li>
-                            <li><br></li>
-                            <li>	
-                                &#9679;Если требуется проверка товара на соответсвие количеству, то при оформлении груза на нашем сайте укажите это в графе "Примечание". Данная услуга платная и составляет 3 юаня за одну позицию в заказе. Любые дополнительные проверки груза обсуждаются индивидуально в том числе и их стоимость.</li>
-                            <li><br></li>
-                            <li><br></li>
-                            <li>	
-                                &#9679;До отправки груза на наш склад в Китае обязательно позаботьтесь о том, чтобы сделать маркировку, с номером Вашего заказа у нас на сайте, для каждой внешней коробки, чтобы мы смогли определить именно Ваш груз. Если у Вас нет возможности сделать это самостоятельно, то попросите об этом своего поставщика.</li>
-                        </ul>
+                    <div class="cooperating__text coop-txt1">
+                        <p>•	Для того, чтобы начать сотрудничество, необходимо оформить груз указав информацию о содержимом груза, его стоимость и количество. А так-же прикрепив фотографии к заявке.</p>
+                        <p>•	Если требуется проверка товара на соответсвие количеству, то при оформлении груза на нашем сайте укажите это в графе "Примечание". Данная услуга платная и составляет 3 юаня за одну позицию в заказе. Любые дополнительные проверки груза обсуждаются индивидуально в том числе и их стоимость.</p>
+                        <p>•	До отправки груза на наш склад в Китае обязательно позаботьтесь о том, чтобы сделать маркировку, с номером Вашего заказа у нас на сайте, для каждой внешней коробки, чтобы мы смогли определить именно Ваш груз. Если у Вас нет возможности сделать это самостоятельно, то попросите об этом своего поставщика.</p>
                     </div>
-                    <div class="cooperating__images">
-                        <img src="/assets/coop1.png">
+                    <div class="cooperating__image1">
                     </div>
-                    <div class="cooperating__images">
-                        <img src="/assets/coop2.png">
+                    <div class="cooperating__image2">
                     </div>
-                    <div class="cooperating__text">
-                        <ul class="list-reset">
-                            <li>&#9679;После отправки груза на наш склад в Китае, Вам обязательно нужно указать трек-номер для отслеживания посылок по Китаю для каждой позиции в заказе. Внести трек-номер можно на странице заказа. Трек-номер - это ещё одна мера для идентификации Вашего груза на нашем складе.</li>
-                            <li><br></li>
-                            <li><br></li>
-                            <li>&#9679;Если Вы оформили груз по нашей инструкции и сделали все правильно, то при получении Вашего груза на складе в Китае статус заказа изменится на "На складе".</li>
-                            <li><br></li>
-                            <li><br></li>
-                            <li><br></li>
-                        </ul>
+                    <div class="cooperating__text coop-txt2">
+                        <p>•	После отправки груза на наш склад в Китае, Вам обязательно нужно указать трек-номер для отслеживания посылок по Китаю для каждой позиции в заказе. Внести трек-номер можно на странице заказа. Трек-номер - это ещё одна мера для идентификации Вашего груза на нашем складе.</p>
+                        <p>•	Если Вы оформили груз по нашей инструкции и сделали все правильно, то при получении Вашего груза на складе в Китае статус заказа изменится на "На складе".</p>
                     <button class="coop__btn btn" type="button"> <p>Оформить груз</p> <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z" fill="#B26519"/>
                         </svg>
@@ -416,15 +447,15 @@
         <div class="footer__container">
             <div class="footer__list">
                 <ul class="list-reset footer__contacts">
-                    <a class="header__logo logo" href="/"><img src="/assets/logo.svg"></a>
+                    <a class="header__logo logo" href="/"><img src="/assets/svgs/logo.svg"></a>
                     <li class="footer__contacts__item"><address><a class="footer__tel" href="tel:+88006001869">8(800)600-18-69</a></address></li>
                     <li class="footer__contacts__item"><address><a class="footer__mail" href="mailto:info@cargoasia.info">info@cargoasia.info</a></address></li>
                     <li class="footer__contacts__item"><address>Адрес в Китае:<br>浙江省金华市义乌市后宅街道洪华小区5<br>栋一单元一楼RT789库房 高建军 电话<br>15966660379</address></li>
                     <li>
                         <ul class="list-reset footer__social">
-                            <li><a href="#"><img class="footer__social__link" src="/assets/instagram.svg" alt=""></a></li>
-                            <li><a href="#"><img class="footer__social__link" src="/assets/vkontakte.svg" alt=""></a></li>
-                            <li><a href="#"><img class="footer__social__link" src="/assets/telegram.svg" alt=""></a></li>
+                            <li><a href="#"><img class="footer__social__link" src="/assets/svgs/instagram.svg" alt=""></a></li>
+                            <li><a href="#"><img class="footer__social__link" src="/assets/svgs/vkontakte.svg" alt=""></a></li>
+                            <li><a href="#"><img class="footer__social__link" src="/assets/svgs/telegram.svg" alt=""></a></li>
                         </ul>
                     </li>
                 </ul>
