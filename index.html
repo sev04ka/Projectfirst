@@ -14,7 +14,10 @@
   <header class="header">
     <div class="header__row">
       <a class="header__logo logo" href="/">
-        <img src="/assets/svgs/logo.svg">
+        <picture>
+          <source srcset="/assets/svgs/Smalllogo.svg" media="(max-width: 600px)">
+          <img src="/assets/svgs/logo.svg">
+        </picture>
       </a>
       <nav class="header__nav">
         <ul class="nav__menu menu list-reset">
@@ -36,87 +39,139 @@
         </ul>
       </nav>
       <button class="header__btn" type="button" id="r-dialog-open">Оставить заявку</button>
+      <div class="mob-menu__btn open-mob-menu" id="mb-1">
+        <div class="mob-menu__btn-line"></div>
+        <div class="mob-menu__btn-line"></div>
+        <div class="mob-menu__btn-line"></div>
+      </div>
+      <div class="mb mob-menu__btn close-mob-menu" id="mb-2">
+        <div class="mob-menu__btn-line"></div>
+        <div class="mob-menu__btn-line"></div>
+        <div class="mob-menu__btn-line"></div>
+      </div>
     </div>
   </header>
+  <div class="filler"></div>
+
+  <div class="mob-menu">
+    <div class="dialog-overlay close-mob-menu"></div>
+    <div class="mob-menu__cont">
+      <ul class="mob-menu__list list-reset">
+        <li class="menu__item close-mob-menu">
+          <a class="menu__link " href="#time-and-price">Цены и сроки</a>
+        </li>
+        <li class="menu__item close-mob-menu">
+          <a class="menu__link " href="#service">Услуги</a>
+        </li>
+        <li class="menu__item close-mob-menu">
+          <a class="menu__link " href="#aboutus">О компании</a>
+        </li>
+        <li class="menu__item close-mob-menu">
+          <a class="menu__link " href="#contacts">Контакты</a>
+        </li>
+        <li class="menu__item close-mob-menu">
+          <a class="menu__link " href="#execute">Оформить груз</a>
+        </li>
+      </ul>
+      <button class="mob__btn btn close-mob-menu" type="button" id="r-dialog-open">Оставить заявку<svg width="27"
+          height="27" viewBox="0 0 27 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
+            fill="#B26519" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
   <main>
     <section class="slider section-config">
       <div class="slider__container">
-        <input checked type="radio" name="slider" id="slide1">
-        <input type="radio" name="slider" id="slide2">
-        <input type="radio" name="slider" id="slide3">
-        <input type="radio" name="slider" id="slide4">
         <div class="slider__content">
-          <div class="slide-n1">
-            <div class="slider-article">
-              <h1 class="slider-article__heading">ПРЯМОЕ КАРГО<br> ИЗ КИТАЯ</h1>
-              <p class="slider-article__text">Доставляем любые грузы из Китая<br> по честной цене</p>
-              <a href="#execute" class="slider-article__btn btn">
-                Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
-                    fill="#B26519" />
-                </svg>
-              </a>
+          <div class="slide-n1 slider-item">
+            <div class="slider-text">
+              <div class="slider-article">
+                <h1 class="slider-article__heading">ПРЯМОЕ КАРГО<br> ИЗ КИТАЯ</h1>
+                <p class="slider-article__text">Доставляем любые грузы из Китая<br> по честной цене</p>
+                <div class="slider__btn-cont">
+                  <a href="#execute" class="slider-article__btn btn">
+                    Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
+                        fill="#B26519" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slide-n2">
-            <div class="slider-article">
-              <h1 class="slider-article__heading">ГАРАНТИРУЕМ<br> СРОКИ!</h1>
-              <p class="slider-article__text">Если мы не уложимся в обозначенные сроки,<br>
-                доставка груза со скидкой до 90%</p>
-              <a href="#execute" class="slider-article__btn btn">
-                Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
-                    fill="#B26519" />
-                </svg>
-              </a>
+          <div class="slide-n2 slider-item">
+            <div class="slider-text">
+              <div class="slider-article">
+                <h1 class="slider-article__heading">ГАРАНТИРУЕМ<br> СРОКИ!</h1>
+                <p class="slider-article__text">Если мы не уложимся в обозначенные сроки,<br>
+                  доставка груза со скидкой до 90%</p>
+                <div class="slider__btn-cont">
+                  <a href="#execute" class="slider-article__btn btn">
+                    Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
+                        fill="#B26519" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slide-n3">
-            <div class="slider-article">
-              <h1 class="slider-article__heading">ВЫКУП ТОВАРА<br> С ТАОБАО, 1688</h1>
-              <p class="slider-article__text">Выкуп и доставка товаров<br>
-                с китайских торговых площадок. </p>
-              <a href="#execute" class="slider-article__btn btn">
-                Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
-                    fill="#B26519" />
-                </svg>
-              </a>
+          <div class="slide-n3 slider-item">
+            <div class="slider-text">
+              <div class="slider-article">
+                <h1 class="slider-article__heading">ВЫКУП ТОВАРА<br> С ТАОБАО, 1688</h1>
+                <p class="slider-article__text">Выкуп и доставка товаров<br>
+                  с китайских торговых площадок. </p>
+                <div class="slider__btn-cont">
+                  <a href="#execute" class="slider-article__btn btn">
+                    Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
+                        fill="#B26519" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="slide-n4">
-            <div class="slider-article">
-              <h1 class="slider-article__heading">ЭКСПРЕСС АВТО<br> ДОСТАВКА</h1>
-              <p class="slider-article__text">Доставка автотранспортом из Китая<br> в Россию от 15 дней,
-                от $0,5/кг</p>
-              <a href="#execute" class="slider-article__btn btn">
-                Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
-                  xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
-                    fill="#B26519" />
-                </svg>
-              </a>
+          <div class="slide-n4 slider-item">
+            <div class="slider-text">
+              <div class="slider-article">
+                <h1 class="slider-article__heading">ЭКСПРЕСС АВТО<br> ДОСТАВКА</h1>
+                <p class="slider-article__text">Доставка автотранспортом из Китая<br> в Россию от 15 дней,
+                  от $0,5/кг</p>
+                <div class="slider__btn-cont">
+                  <a href="#execute" class="slider-article__btn btn">
+                    Рассчитать стоимость <svg width="26.16" height="26.16" viewBox="0 0 27 27" fill="none"
+                      xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M0.421875 13.25C0.421875 6.02539 6.27539 0.171875 13.5 0.171875C20.7246 0.171875 26.5781 6.02539 26.5781 13.25C26.5781 20.4746 20.7246 26.3281 13.5 26.3281C6.27539 26.3281 0.421875 20.4746 0.421875 13.25ZM13.5 24.6406C19.7596 24.6406 24.8906 19.5729 24.8906 13.25C24.8906 6.99043 19.8229 1.85938 13.5 1.85938C7.24043 1.85938 2.10938 6.92715 2.10938 13.25C2.10938 19.5096 7.17715 24.6406 13.5 24.6406ZM14.1592 19.7627L20.2289 13.6982C20.4768 13.4504 20.4768 13.0496 20.2289 12.8018L14.1592 6.7373C13.9113 6.48945 13.5105 6.48945 13.2627 6.7373L12.8988 7.10117C12.651 7.34902 12.651 7.76035 12.9094 8.00293L17.4182 12.3535H7.38281C7.03477 12.3535 6.75 12.6383 6.75 12.9863V13.5137C6.75 13.8617 7.03477 14.1465 7.38281 14.1465H17.4182L12.9041 18.4971C12.651 18.7449 12.6457 19.151 12.8936 19.3988L13.2574 19.7627C13.5105 20.0105 13.9113 20.0105 14.1592 19.7627Z"
+                        fill="#B26519" />
+                    </svg>
+                  </a>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class="slider__control">
-          <label for=slide1><span class="caret"></span></label>
-          <label for=slide2><span class="caret"></span></label>
-          <label for=slide3><span class="caret"></span></label>
-          <label for=slide4><span class="caret"></span></label>
+          <div class="slprev slc"><span class="caret"></span></div>
+          <div class="slnext slc"><span class="caret"></span></div>
         </div>
         <div class="slider__dot-control">
-          <label for=slide1></label>
-          <label for=slide2></label>
-          <label for=slide3></label>
-          <label for=slide4></label>
+          <div class="dotcontr dot dotcontr-active"></div>
+          <div class="dotcontr dot"></div>
+          <div class="dotcontr dot"></div>
+          <div class="dotcontr dot"></div>
         </div>
       </div>
     </section>
@@ -505,20 +560,13 @@
           <div class="delivery__divider"></div>
         </div>
         <div class="service__content">
+          <div class="delivery__controls">
+            <div class="delivery-prev delc"><span class="caret"></span></div>
+            <div class="delivery-next delc"><span class="caret"></span></div>
+          </div>
           <div class="delivery-slider">
-            <input type="radio" checked name="pos-changer" id="del-slider-pos1">
-            <input type="radio" name="pos-changer" id="del-slider-pos2">
-            <input type="radio" name="pos-changer" id="del-slider-pos3">
-            <div class="delivery__labels">
-              <label class="delivery-label-left" for="del-slider-pos3"><span class="caret"></span></label>
-              <label class="delivery-label-left" for="del-slider-pos1"><span class="caret"></span></label>
-              <label class="delivery-label-left" for="del-slider-pos2"><span class="caret"></span></label>
-              <label class="delivery-label-right" for="del-slider-pos2"><span class="caret"></span></label>
-              <label class="delivery-label-right" for="del-slider-pos1"><span class="caret"></span></label>
-              <label class="delivery-label-right" for="del-slider-pos3"><span class="caret"></span></label>
-            </div>
             <div class="delivery-slider__content">
-              <div class="delivery__card">
+              <div class="delivery__card d-s__item">
                 <div class="d-card-img1 d-img"></div>
                 <div class="d-card-content">
                   <h5>Авто - обычная</h5>
@@ -576,12 +624,12 @@
                     <h5>От<span class="big-number">2,5</span>$/кг</h5>
                   </div>
                   <div class="d-card-btns">
-                    <button class="btn delivery__btn" type="button" id="r-dialog-open1">Оставить заявку</button>
+                    <button class="btn delivery__btn" type="button" id="r-dialog-open">Оставить заявку</button>
                     <button class="service__btn" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>
-              <div class="delivery__card">
+              <div class="delivery__card d-s__item">
                 <div class="d-card-img2 d-img"></div>
                 <div class="d-card-content">
                   <h5>Авто - ускоренная</h5>
@@ -639,12 +687,12 @@
                     <h5>От<span class="big-number">2,5</span>$/кг</h5>
                   </div>
                   <div class="d-card-btns">
-                    <button class="btn delivery__btn" type="button" id="r-dialog-open2">Оставить заявку</button>
+                    <button class="btn delivery__btn" type="button" id="r-dialog-open">Оставить заявку</button>
                     <button class="service__btn" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>
-              <div class="delivery__card">
+              <div class="delivery__card d-s__item">
                 <div class="d-card-img3 d-img"></div>
                 <div class="d-card-content">
                   <h5>Авиа</h5>
@@ -702,12 +750,12 @@
                     <h5>От<span class="big-number">2,5</span>$/кг</h5>
                   </div>
                   <div class="d-card-btns">
-                    <button class="btn delivery__btn" type="button" id="r-dialog-open3">Оставить заявку</button>
+                    <button class="btn delivery__btn" type="button" id="r-dialog-open">Оставить заявку</button>
                     <button class="service__btn" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>
-              <div class="delivery__card">
+              <div class="delivery__card d-s__item">
                 <div class="d-card-img4 d-img"></div>
                 <div class="d-card-content">
                   <h5>Ж/д</h5>
@@ -765,12 +813,12 @@
                     <h5>От<span class="big-number">2,5</span>$/кг</h5>
                   </div>
                   <div class="d-card-btns">
-                    <button class="btn delivery__btn" type="button" id="r-dialog-open4">Оставить заявку</button>
+                    <button class="btn delivery__btn" type="button" id="r-dialog-open">Оставить заявку</button>
                     <button class="service__btn" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>
-              <div class="delivery__card">
+              <div class="delivery__card d-s__item">
                 <div class="d-card-img5 d-img"></div>
                 <div class="d-card-content">
                   <h5>Море</h5>
@@ -828,12 +876,19 @@
                     <h5>От<span class="big-number">2,5</span>$/кг</h5>
                   </div>
                   <div class="d-card-btns">
-                    <button class="btn delivery__btn" type="button" id="r-dialog-open5">Оставить заявку</button>
+                    <button class="btn delivery__btn" type="button" id="r-dialog-open">Оставить заявку</button>
                     <button class="service__btn" type="button">Подробнее</button>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
+          <div class="dots-container">
+            <div class="del-dot dot dotcontr-active "></div>
+            <div class="del-dot dot"></div>
+            <div class="del-dot dot"></div>
+            <div class="del-dot dot"></div>
+            <div class="del-dot dot"></div>
           </div>
         </div>
       </div>
@@ -1083,7 +1138,12 @@
     <div class="footer__container">
       <div class="footer__list">
         <ul class="list-reset footer__contacts">
-          <a class="header__logo logo" href="/"><img src="/assets/svgs/logo.svg"></a>
+          <a class="header__logo logo" href="/">
+            <picture>
+              <source srcset="/assets/svgs/Smalllogo.svg" media="(max-width: 1000px)">
+              <img src="/assets/svgs/logo.svg">
+            </picture>
+          </a>
           <li class="footer__contacts__item">
             <address><a class="footer__tel" href="tel:+88006001869">8(800)600-18-69</a></address>
           </li>
@@ -1211,6 +1271,8 @@
       </div>
     </div>
   </div>
+
+
 
   <script src="/js/main.js"></script>
 
