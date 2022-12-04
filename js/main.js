@@ -155,7 +155,7 @@ function prevSlide() {
     dotIndex--
   } else {
     position = (slides.length - 1) * positionstep
-    dotIndex = (slides.length)
+    dotIndex = (slides.length - 1)
   }
   sliderLine.style.transform = 'translateX(' + -position + '%)'
   dotChange(dotIndex)
@@ -180,9 +180,35 @@ dots.forEach(function (dot, index) {
   dot.addEventListener('click', dotControl)
 })
 
-// setInterval(function () {
-//   nextSlide()
-// }, 3000);
+setInterval(function () {
+  nextSlide()
+}, 3000);
+
+//Слайдер преимуществ (только в мобильной версии)
+const benefitLine = document.querySelector('.benefit__article-container');
+const benefitDots = document.querySelectorAll('.ben-dot');
+const benefitCards = document.querySelectorAll('.benefit__article');
+
+let benefitPosition = 0;
+let benefitPositionStep = (100 / benefitCards.length);
+let benefitDotIndex = 0;
+
+function benefitDotChange() {
+  benefitDots.forEach(function (dotb, index) {
+    dotb.classList.remove('dotcontr-active')
+  })
+  benefitDots[benefitDotIndex].classList.add('dotcontr-active')
+}
+
+benefitDots.forEach(function (dotb, index) {
+  function benefitDotControl() {
+    benefitPosition = index * benefitPositionStep
+    benefitLine.style.transform = 'translateX(' + -benefitPosition + '%)'
+    benefitDotIndex = index
+    benefitDotChange(benefitDotIndex)
+  }
+  dotb.addEventListener('click', benefitDotControl)
+})
 
 //Слайдер доставки
 const deliveryLine = document.querySelector('.delivery-slider__content');
@@ -190,19 +216,26 @@ const delNext = document.querySelector('.delivery-next');
 const delPrev = document.querySelector('.delivery-prev');
 const delDots = document.querySelectorAll('.del-dot');
 const delCardsCount = document.querySelectorAll('.d-s__item');
+//количество карточек слайдера услуг
+const serviceCardsCount = document.querySelectorAll('.card-conf');
+//количество карточек слайдера услуг
 const windowWidth = document.body.clientWidth;
 
 let delPosition = 0;
 let delDotIndex = 0;
 let delPositionStep = (100 / delCardsCount.length);
 let stepsCount = 0;
+let servStepsCount = 0;
 
 if (windowWidth <= 900) {
   stepsCount = (delCardsCount.length)
+  servStepsCount = (serviceCardsCount.length)
 } else if (windowWidth <= 1350) {
   stepsCount = (delCardsCount.length - 1)
+  servStepsCount = (serviceCardsCount.length - 1)
 } else if (windowWidth > 1350) {
   stepsCount = (delCardsCount.length - 2)
+  servStepsCount = (serviceCardsCount.length - 2)
 }
 
 function delNextSlide() {
@@ -223,7 +256,7 @@ function delPrevSlide() {
     delDotIndex--
   } else {
     delPosition = (stepsCount - 1) * delPositionStep
-    delDotIndex = (delCardsCount.length)
+    delDotIndex = (delCardsCount.length - 1)
   }
   deliveryLine.style.transform = 'translateX(' + -delPosition + '%)'
   delDotChange(delDotIndex)
@@ -246,4 +279,59 @@ delDots.forEach(function (dotd, index) {
     delDotChange(delDotIndex)
   }
   dotd.addEventListener('click', delDotControl)
-})
+});
+
+//Слайдер услуг
+const serviceLine = document.querySelector('.service__slider__content');
+const serviceDots = document.querySelectorAll('.serv-dot');
+const serviceNext = document.querySelector('.serv-next');
+const servicePrev = document.querySelector('.serv-prev');
+
+let servicePosition = 0;
+let serviceDotIndex = 0;
+let servPositionStep = (100 / serviceCardsCount.length);
+
+function serviceNextSlide() {
+  if (servicePosition < (servStepsCount - 1) * servPositionStep) {
+    servicePosition += servPositionStep
+    serviceDotIndex++
+  } else {
+    servicePosition = 0
+    serviceDotIndex = 0
+  }
+  serviceLine.style.transform = 'translateX(' + -servicePosition + '%)'
+  servDotChange(serviceDotIndex)
+}
+
+function servicePrevSlide() {
+  if (servicePosition > 0) {
+    servicePosition -= servPositionStep
+    serviceDotIndex--
+  } else {
+    servicePosition = (servStepsCount - 1) * servPositionStep
+    serviceDotIndex = (serviceCardsCount.length - 1)
+  }
+  serviceLine.style.transform = 'translateX(' + -servicePosition + '%)'
+  servDotChange(serviceDotIndex)
+}
+
+function servDotChange() {
+  serviceDots.forEach(function (dotss, index) {
+    dotss.classList.remove('dotcontr-active')
+  })
+  serviceDots[serviceDotIndex].classList.add('dotcontr-active')
+}
+
+serviceNext.addEventListener('click', serviceNextSlide);
+servicePrev.addEventListener('click', servicePrevSlide);
+serviceDots.forEach(function (dotss, index) {
+  function servDotControl() {
+    servicePosition = index * servPositionStep
+    serviceLine.style.transform = 'translateX(' + -servicePosition + '%)'
+    serviceDotIndex = index
+    servDotChange(serviceDotIndex)
+  }
+  dotss.addEventListener('click', servDotControl)
+});
+
+
