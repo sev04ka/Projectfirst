@@ -132,6 +132,7 @@ const prevBtn = document.querySelector('.slprev');
 const nextBtn = document.querySelector('.slnext');
 const dots = document.querySelectorAll('.dotcontr');
 const slides = document.querySelectorAll('.slider-item');
+const sliderArea = document.querySelector('.slider');
 
 let position = 0;
 let dotIndex = 0;
@@ -168,6 +169,12 @@ function dotChange() {
   dots[dotIndex].classList.add('dotcontr-active')
 }
 
+function autoPlay() {
+  nextSlide()
+}
+
+let automatic = setInterval(autoPlay, 3000);
+
 nextBtn.addEventListener('click', nextSlide)
 prevBtn.addEventListener('click', prevSlide)
 dots.forEach(function (dot, index) {
@@ -180,9 +187,15 @@ dots.forEach(function (dot, index) {
   dot.addEventListener('click', dotControl)
 })
 
-setInterval(function () {
-  nextSlide()
-}, 3000);
+sliderArea.addEventListener('mouseover', () => {
+  clearInterval(automatic)
+})
+
+sliderArea.addEventListener('mouseout', () =>
+  automatic = setInterval(autoPlay, 3000)
+)
+
+
 
 //Слайдер преимуществ (только в мобильной версии)
 const benefitLine = document.querySelector('.benefit__article-container');
