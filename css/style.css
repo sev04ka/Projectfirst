@@ -898,6 +898,7 @@ h3 {
   width: 1180px;
   max-width: 100%;
   overflow: hidden;
+  border-radius: 20px;
 }
 
 .delivery-slider input {
